@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>My Album</title>
+        <style>
+
+*{
+    margin :0;
+    padding :0;
+    box-sizing : border-box;
+}
+body{
+    display : flex;
+    justify-content : center;
+    align-items: center;
+    min-height : 900px;
+    background :url("img2.jpg");
+}
+.box{
+    position : relative;
+    width :100px;
+    height :200px;
+    transform-style: preserve-3d;
+    animation : animate 25s linear infinite;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform : perspective(1000px) rotateY(0deg);
+    }
+    100%
+    {
+        transform : perspective(1000px) rotateY(360deg);
+    }
+}
+
+.box span{
+    position: absolute;
+    top: 0;
+    left : 0;
+    width : 100%;
+    height: 100%;
+    transform-origin : center;
+    transform-style: preserve-3d;
+    transform : rotateY(calc(var(--i)*15deg)) translateZ(400px);
+/*-webkit-box-sreflect: below 0px; = isse reflection dikhega*/
+-webkit-box-reflect: below  0px linear-gradient(transparent ,transparent, #0004);
+}
+.box span img{
+    position : absolute;
+    top : 0;
+    left :0;
+    width:100%;
+    height : 100%;
+    object-fit: cover;
+}
+.box span a{
+    width:100px;
+    height : 30px;
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+        <span style="--i:1;"><a href="p.jpg"><img src="p.jpg"></a> </span>        
+        <span style="--i:2;"><a href="p1.jpg"><img src="p1.jpg" ></a></span>
+        <span style="--i:3;"><a href="p2.jpg"><img src="p2.jpg" ></a></span>
+        <span style="--i:4;"><a href="p3.jpg"><img src="p3.jpg" ></a></span>
+        <span style="--i:5;"><a href="p4.jpg"><img src="p4.jpg" ></a></span>
+        <span style="--i:6;"><a href="p5.jpg"><img src="p5.jpg" ></a></span>
+        <span style="--i:7;"><a href="p6.jpg"><img src="p6.jpg" ></a></span>
+        <span style="--i:8;"><a href="p7.jpg"><img src="p7.jpg" ></a></span>
+        <span style="--i:9;"><a href="p8.jpg"><img src="p8.jpg"></a> </span>        
+        <span style="--i:10;"><a href="p9.jpg"><img src="p9.jpg" ></a></span>
+        <span style="--i:11;"><a href="p10.jpg"><img src="p10.jpg" ></a></span>
+        <span style="--i:12;"><a href="p11.jpg"><img src="p11.jpg" ></a></span>
+        <span style="--i:13;"><a href="p12.jpg"><img src="p12.jpg" ></a></span>
+        <span style="--i:14;"><a href="p13.jpg"><img src="p13.jpg" ></a></span>
+        <span style="--i:15;"><a href="p14.jpg"><img src="p14.jpg" ></a></span>
+        <span style="--i:16;"><a href="p15.jpg"><img src="p15.jpg" ></a></span>
+        <span style="--i:17;"><a href="p16.jpg"><img src="p16.jpg"></a> </span>        
+        <span style="--i:18;"><a href="p17.jpg"><img src="p17.jpg" ></a></span>
+        <span style="--i:19;"><a href="p18.jpg"><img src="p18.jpg" ></a></span>
+        <span style="--i:20;"><a href="p19.jpg"><img src="p19.jpg" ></a></span>
+        <span style="--i:21;"><a href="p20.jpg"><img src="p20.jpg" ></a></span>
+        <span style="--i:22;"><a href="p21.jpg"><img src="p21.jpg" ></a></span>
+        <span style="--i:23;"><a href="p22jpg"><img src="p22.jpg" ></a></span>
+        <span style="--i:24;"><a href="p23.jpg"><img src="p23.jpg" ></a></span>
+        </div>
+    </body>
+</html>
